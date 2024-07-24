@@ -7,7 +7,7 @@ const Gender = {
   OTHER: 'Other',
 };
 
-const ProfilePage = () => {
+const ProfileScreen = () => {
   const [name, setName] = useState('');
   const [dob, setDob] = useState('');
   const [gender, setGender] = useState('');
@@ -83,7 +83,7 @@ const ProfilePage = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Add Profile</Text>
+      <Text style={styles.header}>Create Profile</Text>
       
       <TextInput
         style={styles.input}
@@ -196,4 +196,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default ProfilePage;
+export default ProfileScreen;
