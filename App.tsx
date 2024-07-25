@@ -2,7 +2,7 @@ import * as React from 'react';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import HomeScreen from './src/Screens/HomeScreen.jsx';
-import ProfilePage from './src/Screens/ProfileScreen.jsx';
+import ProfileScreen from './src/Screens/ProfileScreen.jsx';
 import ResultScreen from './src/Screens/ResultScreen.jsx';
 
 const Stack = createNativeStackNavigator();
@@ -10,8 +10,18 @@ const Stack = createNativeStackNavigator();
 const App = () => {
     return (
     <NavigationContainer>
-      <Stack.Navigator>
-      <Stack.Screen name="Profile" component={ProfilePage}/>
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: {
+            backgroundColor: '#1a73e8', 
+          },
+          headerTintColor: '#fff',
+          headerTitleStyle: {
+            fontWeight: 'bold', 
+          },
+        }}
+      >
+        <Stack.Screen name="Welcome To BMI App" component={ProfileScreen}/>
         <Stack.Screen
           name="Home"
           component={HomeScreen}
